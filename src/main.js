@@ -1,5 +1,5 @@
 function loadTemplate(file, containerId) {
-    fetch(file)
+   return fetch(file)
         .then((response) => {
             if (!response.ok) {
                 throw new Error(`Could not load file: ${file}`);
@@ -13,5 +13,12 @@ function loadTemplate(file, containerId) {
 }
 
 // Load the navbar and template
-loadTemplate("templates/navbar.html", "navBar");
-loadTemplate("templates/menu.html", "templateContainer");
+loadTemplate("templates/navbar.html", "navBar").then(() => {
+    const settingsButton = document.querySelector("#settingsButton");
+    if (settingsButton){
+        settingsButton.addEventListener("click", ()=>{
+            alert("Settings button clicked");
+        })
+    }
+}); //once loaded, chained a settings button function on to the navbar
+loadTemplate("templates/menu.html", "menu");
