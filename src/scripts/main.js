@@ -1,4 +1,4 @@
-import { settingsButton } from "./settingsButton";
+import { settingsButton } from "./settingsButton.js";
 
 function loadTemplate(file, containerId) {
   return fetch(file)
