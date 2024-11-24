@@ -9,5 +9,6 @@ export function settingsButton() {
 }
 
 function displaySettingsMenu() {
-  //add options to select language and show user name and subscription level
+  // Pop up into a separate window/website for user settings
 }
+
