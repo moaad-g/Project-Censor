@@ -1,22 +1,40 @@
 <div class="option-row">
-    <label class="toggle-label" for="nudity">Nudity Censor:</label>
-    <div class="toggle-switch">
-        <input type="checkbox" id="nudity" class="toggle-input">
-        <label for="nudity" class="toggle-slider"></label>
-    </div>
+  <label class="toggle-label" for="nudity">Nudity Censor:</label>
+  <div class="toggle-switch">
+    <input type="checkbox" id="nudity" class="toggle-input" />
+    <label for="nudity" class="toggle-slider"></label>
+  </div>
 </div>
+
+<script>
+    document.getElementById("nudity").addEventListener("change", function () {
+      if (this.checked) {
+        alert("Nudity censor enabled");
+      } else {
+        alert("Nudity censor disabled");
+      }
+    });
+  </script>
+
+<script>
+    document.getElementById("profanity").addEventListener("change", function () {
+      if (this.checked) {
+        alert("Profanity censor enabled");
+      } else {
+        alert("Profanity censor disabled");
+      }
+    });
+  </script>
 
 <div class="option-row">
-    <label class="toggle-label" for="profanity">Profanity Censor:</label>
-    <div class="toggle-switch">
-        <input type="checkbox" id="profanity" class="toggle-input">
-        <label for="profanity" class="toggle-slider"></label>
-    </div>
+  <label class="toggle-label" for="profanity">Profanity Censor:</label>
+  <div class="toggle-switch">
+    <input type="checkbox" id="profanity" class="toggle-input" />
+    <label for="profanity" class="toggle-slider"></label>
+  </div>
 </div>
 
-
-
-    <div class="user-info">
-        <p>Jane Doe</p>
-        <p>Subscription Level: Basic Tier</p>
-    </div>
+<div class="user-info">
+  <p>Jane Doe</p>
+  <p>Subscription Level: Basic Tier</p>
+</div>
