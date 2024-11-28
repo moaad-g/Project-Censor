@@ -1,4 +1,5 @@
 import { settingsButton } from "./settingsButton.js";
+import { menu } from "./menu.js";
 
 function loadTemplate(file, containerId) {
   return fetch(file)
@@ -17,5 +18,8 @@ function loadTemplate(file, containerId) {
 // Load the navbar and template
 loadTemplate("templates/navbar.html", "navBar").then(() => {
   settingsButton();
-}); //once loaded, chained a settings button function on to the navbar
-loadTemplate("templates/menu.html", "menu");
+});
+
+loadTemplate("templates/menu.html", "content").then(() => {
+  menu();
+});
