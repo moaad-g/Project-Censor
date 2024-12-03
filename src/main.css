@@ -13,12 +13,20 @@ body {
     padding: 0;
 }
 
-a {
+.icon-button {
     color: white;
+    background-color: transparent;
+    border: none;
     text-decoration: none;
     display: inline-block;
     padding: 5px;
     border-radius: 50%;
+}
+
+.icon-button:hover {
+    background-color: #696969;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow */
+    cursor: pointer;
 }
 
 .template {
@@ -39,22 +47,27 @@ nav{
     box-sizing: border-box;
 }
 
-
-.navbar a:hover {
-    background-color: #696969;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow */
-    transform: translateY(-2px);
-}
 /* MENU PAGE */
 .option-row {
     display: flex;
     align-items: center;
     justify-content:space-between;
-    width: 75%;
-    max-width: 75%;
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
-label{
-    font-size: 15px;
+.option-row label{
+    font-size: 14px;
+    min-width: 80%;
+}
+
+.macro-input{
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 4px;
+    width: 20px;
+    min-width: 90px;
+    min-height: 20px;
 }

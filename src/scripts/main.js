@@ -1,24 +1,9 @@
-import { settingsButton } from "./settingsButton.js";
+import Navbar from "./navbar.js";
 import { menu } from "./menu.js";
-
-function loadTemplate(file, containerId) {
-  return fetch(file)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Could not load file: ${file}`);
-      }
-      return response.text();
-    })
-    .then((html) => {
-      document.getElementById(containerId).innerHTML = html;
-    })
-    .catch((error) => console.error(error));
-}
+import { loadTemplate } from "./loadTemplate.js";
 
 // Load the navbar and template
-loadTemplate("templates/navbar.html", "navBar").then(() => {
-  settingsButton();
-});
+const navbar = new Navbar()
 
 loadTemplate("templates/menu.html", "content").then(() => {
   menu();
