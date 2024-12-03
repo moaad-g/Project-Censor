@@ -1,10 +1,6 @@
 import Navbar from "./navbar.js";
-import { menu } from "./menu.js";
-import { loadTemplate } from "./loadTemplate.js";
+import Menu from "./menu.js";
 
-// Load the navbar and template
+// Load the navbar and menu
 const navbar = new Navbar()
-
-loadTemplate("templates/menu.html", "content").then(() => {
-  menu();
-});
+const menu = new Menu()

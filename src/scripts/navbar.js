@@ -1,5 +1,5 @@
 import { loadTemplate } from "./loadTemplate.js";
-
+import Settings from "./settings.js";
 
 export default class Navbar {
   constructor() {
@@ -16,12 +16,13 @@ export default class Navbar {
   }
 
   attachListeners() {
-    const settingsButton = document.querySelector("#settingsButton");
-    console.log(settingsButton)
-    if (settingsButton) {
-      settingsButton.addEventListener("click", () => {
-        console.log('click')
-      });
+    const settingsButton = document.getElementById("settingsButton");
+    try{
+        settingsButton.addEventListener("click", () => {
+          settings = new Settings()
+        });
+    } catch (error) {
+      alert('unable to bind listeners')
     }
   }
 }

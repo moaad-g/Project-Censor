@@ -1,18 +1,19 @@
-//this page should contain all listeners and functionality for the main menu page
+import { loadTemplate } from "./loadTemplate.js";
 
-export function menu() {
-    // const nudityToggle = document.getElementById("nudityToggleSwitch");
-    // const soundToggle = document.getElementById("soundToggleSwitch");
+export default class Menu {
+  constructor() {
+    this.render()
+  }
 
-    // if (nudityToggle && soundToggle) {
-    //     nudityToggle.addEventListener("click", () => {
-    //         alert("nudity");
-    //     });
-
-    //     soundToggle.addEventListener("click", () => {
-    //         alert("sound");
-    //     });
-    // } else {
-    //     alert("Error, App wasn't able to load properly, please re-install");
-    // }
+  render() {
+    loadTemplate("templates/menu.html", "content").then(() => {
+      this.attachListeners();
+    })
+    .catch(error => {
+      console.error("Error loading template:", error);
+    });
+  }
+  attachListeners() {
+  }
 }
+
