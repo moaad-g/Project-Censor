@@ -19,7 +19,7 @@ export default class Navbar {
     const settingsButton = document.getElementById("settingsButton");
     try{
         settingsButton.addEventListener("click", () => {
-          settings = new Settings()
+          const settings = new Settings()
         });
     } catch (error) {
       alert('unable to bind listeners')
