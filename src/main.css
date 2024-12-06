@@ -1,0 +1,73 @@
+/* GENERIC */
+
+html {
+    width: 300px;
+    height: 400px;
+}
+
+body {
+    font-family: "Monaco", monospace;
+    background-color: #282C2B;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.icon-button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.icon-button:hover {
+    background-color: #696969;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow */
+    cursor: pointer;
+}
+
+.template {
+    padding: 10px;
+}
+
+/* NAVBAR */
+nav{
+    height: 15%;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1C2222;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* MENU PAGE */
+.option-row {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.option-row label{
+    font-size: 14px;
+    min-width: 80%;
+}
+
+.macro-input{
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 4px;
+    width: 20px;
+    min-width: 90px;
+    min-height: 20px;
+}
